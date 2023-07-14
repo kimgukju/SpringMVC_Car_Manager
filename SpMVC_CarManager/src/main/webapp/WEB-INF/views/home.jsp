@@ -7,25 +7,26 @@
 <head>
 <meta charset="UTF-8">
 <title>차량 관리 매니저</title>
+<link href="${rootPath}/static/css/home.css?20230714-023" rel="stylesheet">
 </head>
 <body>
 <header>
 <h1>MY CAR MANAGER</h1>
 </header>
-<form class="mian" method="POST">
+<form class="main" method="POST">
 <div>
 <strong>운행등록</strong> 
 <input placeholder="구분" name="division"/>
 <input placeholder="시작거리" name="s_distance"/>
 <input placeholder="장소" name="place"/>
 </div>
-<div>
+<div class ="second line">
 <input placeholder="종료거리" name="a_distance"/>
 <input placeholder="소요비용" name="cost"/>
 <button class="button">저장</button>
 </div>
 </form>
-<table class="main">
+<table class="main list">
 	<tr>
 		<th>No.</th>
 		<th>구분</th>
@@ -38,9 +39,9 @@
 		<th>장소</th>
 		<th>소요비용</th>
 	</tr>
+
 	<c:forEach items="${CAR_LIST}" var="CAR">
 		<tr>
-	
 			<td>${CAR.c_seq}</td>
 			<td>${CAR.c_division}</td>
 			<td>${CAR.c_sdate}</td>

@@ -30,7 +30,7 @@ public class HomeController {
 	}
 	
 	
-	@RequestMapping(value="/", method=RequestMethod.POST)
+	@RequestMapping(value="/insert", method=RequestMethod.POST)
 	public String insert(CarDto carDto, Model model) {
 		List<CarDto> carList = carDao.insert();
 		model.addAttribute("CAR_LIST",carList);
